@@ -1,0 +1,16 @@
+<div *ngIf="episodes.length > 0">
+    <h2>Lista de Episodios</h2>
+    <ul>
+      <li *ngFor="let episode of episodes">
+        {{ episode.Title }} 
+      </li>
+    </ul>
+  </div>
+  
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }} 
+  </div>
+  
+  <div *ngIf="episodes.length === 0 && !errorMessage">
+    <p>No se encontró el capítulo.</p>  
+  </div>
